@@ -1,0 +1,280 @@
+.taskbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.taskbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px 10px;
+  text-decoration: none;
+  border-bottom: 5px solid rgba(0,0,0,0);
+  font-size: 17px;
+}
+
+.taskbar .left {
+      float: left;
+}
+
+.taskbar .right {
+      float: right;
+}
+
+
+.taskbar a:hover {
+  border-bottom: 5px solid #1793d0;
+}
+
+.taskbar a.active {
+  border-bottom: 5px solid #1793d0;
+}
+
+.taskbar a.min {
+  background-color: #000;
+}
+
+
+body,div,padding,input,p,img{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body,html{
+    color:#DDD;
+}
+
+div#content{
+	margin-left: 1%
+}
+
+div#content{
+	font: 1em Consolas, monaco, monospace;
+}
+
+a:link, a:visited{
+    color:#DDD;
+}
+
+div#top_line{
+
+}
+
+div#header{
+	margin-top:1%;
+}
+
+div#footer{
+	text-align: center;
+}
+
+div.topic_header{
+	color: #7CFC11;
+	margin-top:2%;
+}
+
+div.body_text{
+	margin-left:5%;
+}
+
+div.:nth-child(odd){
+	background-color: #444;
+}
+div.:nth-child(even){
+	background-color: #222;
+}
+
+div.body_text:last-chid{
+}
+
+.linko{
+	display: inline-block;
+}
+body {
+    background-image: url("arch_linux_background.jpg");
+    background-size: 100%, 100%;
+}
+#head {
+    font-family:monospace;
+    color: white;
+    margin: auto;
+    padding: 8px;
+    font-size: 38px;
+    text-align: center;
+}
+#bar {
+    /* text-align: center; */
+    width: 60vw;
+    height: 27px;
+    background-color: #1e2021;
+    margin: 0 auto;
+    padding: auto;
+    float: none;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 5px 10px 0px black;
+}
+
+#red {
+    background-image: url("close.svg");
+    width: 10px;
+    height: 10px;
+    /* margin: 0 auto; */
+    left: 96%;
+    bottom: -8px;
+    position:relative;
+    z-index:999;
+}
+#yellow {
+    background-image: url("maximize.svg");
+    width: 10px;
+    height: 10px;
+    /* margin: 0 auto; */
+    left: 93%;
+    bottom: 3px;
+    position:relative;
+    display: block;
+    z-index:999;
+}
+#green {
+    background-image: url("minimize.svg");
+    width: 10px;
+    height: 12px;
+    /* margin: 0 auto; */
+    left: 90%;
+    bottom: 14px;
+    position:relative;
+    display: block;
+    z-index:999;
+}
+
+#headerText {
+    /* width: 10px; */
+    /* height: 10px; */
+    padding: 2px;
+    margin: 0 auto;
+    /* left: -42%; */
+    bottom: 128%;
+    position:relative;
+    display: block;
+    /* font-weight: bolder; */
+    font-size: 16px;
+    font-family: monospace;
+    text-align: center;
+}
+
+
+#bgImage {
+    background-color: rgba(50,50,50,0.6);
+	/* opacity: 0.9; */
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* height: 537px; */
+	border-radius: 0;
+	margin: 0 auto;
+	/* padding: 1px; */
+	/* max-height: 600px; */
+	position: relative;
+    top: -35px;
+}
+
+#terminal {
+    background-color: rgba(20,20,20,0.6);
+    padding: 1px;
+    overflow-y: scroll;
+    opacity: 0.97;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px 0px black;
+    max-height: 80vh;
+     cursor: default
+}
+
+::-webkit-scrollbar {
+    width:1px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background:rgba(0,0,0,0.0) !important; 
+}
+
+.font {
+    color: #fff;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+    position: static;
+}
+
+.terminalcursor {
+  color: #7CFC11;
+}
+.terminalcursor:after {
+	content:"_";
+	opacity: 0;
+	animation: terminalcursor 0.8s infinite;
+}
+
+
+@keyframes terminalcursor {
+	0% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 1;
+	}
+	55% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.list-inline li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    #screen {
+    background-color: #222;
+    max-height: 88vh;
+    padding: 1px;
+    overflow-y: scroll;
+    opacity: .96;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px 0px black;
+    }
+
+#head {
+    font-family: monospace;
+    color: black;
+    margin: auto;
+    padding: 1%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#headerText {
+    padding: 2px;
+    margin: 0 auto;
+    bottom: 124%;
+    position:relative;
+    display: block;
+    font-size: 14px;
+    font-family: monospace;
+    text-align: center;
+}
+
+
