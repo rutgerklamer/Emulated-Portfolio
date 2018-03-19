@@ -1,15 +1,20 @@
 let hide = false;
+let close = false;
 $(document).ready(function () {
     $("#time").text(get_time());
     $("#terminalexe").dblclick(function () {
         $("#terminal").show("fade", {}, 400);
         $("#bar").show("fade", {}, 400);
-        $("#tasks").append("<a id='terminaltask' class='left active' style='cursor: default;'> Terminal</a>");
+        if (close) {
+            $("#tasks").append("<a id='terminaltask' class='left active' style='cursor: default;'> Terminal</a>");
+            close = false;
+        }
     });
 
     $("#bar").draggable();
     setInterval(function () { $("#time").text(get_time()); }, 1000);
     $("#red").click(function () {
+        close = true;
         $("#terminal").hide("fade", {}, 400);
         $("#bar").hide("fade", {}, 400);
         $('a').remove("#terminaltask");
